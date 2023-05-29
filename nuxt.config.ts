@@ -2,6 +2,10 @@
 export default defineNuxtConfig({ 
     plugins: [ { src: '~/plugins/notification', mode: 'client' }],
     modules: [
-        '@nuxtjs/tailwindcss'
-    ]
+        '@nuxtjs/tailwindcss',
+        '@vueuse/nuxt',
+    ],
+    runtimeConfig: {
+        apiURL: process.env.API_URL
+    }
 })
